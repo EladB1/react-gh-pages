@@ -1,0 +1,25 @@
+{
+    "Projects": [
+        {
+            "title": "Placeholder",
+            "start": "June 2019",
+            "end": "Oct 2019",
+            "link": "https://google.com",
+            "Description": "Description of project that took X amount of time to complete and involved doing something or another",
+            "tags": [
+                "Python",
+                "MongoDB"
+            ]
+        },
+        {
+            "title": "Title",
+            "start": null,
+            "end": null,
+            "link": null,
+            "Description": "Another project that involved effort",
+            "tags": [
+                "Java"
+            ]
+        }
+    ]
+}

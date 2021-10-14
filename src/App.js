@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import './Project.css';
+import Projects from './projects.json';
 
+/*
 const ProjectTitle = (props) => {
 
 };
@@ -17,25 +19,45 @@ const ProjectTimeFrame = (props) => {
 const ProjectTags = (props) => {
 
 };
+*/
 
-const Project = (props) => {
+const Project = props => {
+    console.log(props);
     return (
         <div class="project">
-          <p id="title">Title</p>
-          <p id="time">June 2019-Oct. 2019</p>
-          <hr id="sep1"/>
-          <p id="descr">Description of project that took X amount of time to complete and involved doing something or another</p>
-          <hr id="sep2"/>
-          <div id="tags">
-            <p class="tag">Python</p>
-            <p class="tag">MongoDB</p>
-          </div>
+            <div id="section1">
+                <p id="title">{props.title}</p>
+                {props.start != null && props.end != null &&
+                    <p id="time">{props.start}-{props.end}</p>
+                }
+                {props.link != null &&
+                    <a href={props.link} className="p_link"
+                    rel="noopener noreferrer" target="_blank"
+                    >Project Link</a>
+                }
+            </div>
+            <div id="section2">
+                <p id="descr">{props.Description}</p>
+            </div>
+            <div id="section3">
+                <div id="tags">
+                  {props.tags.map((tag, index) => {
+                      return (
+                          <p class="tag">{tag}</p>
+                      )
+                  })}
+                  {/*
+                  <p class="tag">Python</p>
+                  <p class="tag">MongoDB</p>
+                  */}
+                </div>
+            </div>
         </div>
     );
 };
 
-
 function App() {
+  let list = Projects.Projects;
   return (
     <div className="App">
       <header className="App-header">
@@ -51,9 +73,21 @@ function App() {
         >
           Learn React
         </a>*/}
-        <div id="projectDisplay">
-            <Project />
-            <Project />
+        <div className="projectDisplay">
+            {list.map((project, index) => {
+                return (<Project
+                    title={project.title}
+                    start={project.start}
+                    end={project.end}
+                    link={project.link}
+                    Description={project.Description}
+                    tags={project.tags}
+                />)
+            })}
+            {/*
+                <Project />
+                <Project />
+            */}
         </div>
       </header>
     </div>
