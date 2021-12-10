@@ -1,28 +1,10 @@
 //import logo from './logo.svg';
-import './App.css';
-import './Project.css';
+import './Css/App.css';
+import './Sass/Project.scss';
+import './Sass/menu.scss';
 import Projects from './projects.json';
 
-/*
-const ProjectTitle = (props) => {
-
-};
-
-const ProjectDescription = (props) => {
-
-};
-
-const ProjectTimeFrame = (props) => {
-
-};
-
-const ProjectTags = (props) => {
-
-};
-*/
-
 const Project = props => {
-    console.log(props);
     return (
         <div class="project">
             <div id="section1">
@@ -46,10 +28,6 @@ const Project = props => {
                           <p class="tag">{tag}</p>
                       )
                   })}
-                  {/*
-                  <p class="tag">Python</p>
-                  <p class="tag">MongoDB</p>
-                  */}
                 </div>
             </div>
         </div>
@@ -73,6 +51,12 @@ function App() {
         >
           Learn React
         </a>*/}
+        <div className="menu">
+            <div className="About">About</div>
+            <div className="Skills">Skills</div>
+            <div className="Projects">Projects</div>
+            <div className="Contact">Contact</div>
+        </div>
         <div className="projectDisplay">
             {list.map((project, index) => {
                 return (<Project
@@ -84,10 +68,6 @@ function App() {
                     tags={project.tags}
                 />)
             })}
-            {/*
-                <Project />
-                <Project />
-            */}
         </div>
       </header>
     </div>

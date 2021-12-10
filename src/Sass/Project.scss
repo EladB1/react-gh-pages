@@ -1,0 +1,95 @@
+$project-container-color: #1f2245; //#003186;
+$project-text-color: #ffffff;
+$link_color: #ffffff;
+$link_visited_color: #ff0000;
+$tag_text_color: #a90000;
+$tag_bg_color: #cfcacd;
+$project_height: 20em;
+$project_width: 22em;
+$project_section_height: $project_height / 3;
+$project_section_divider: 1px solid #ffffff;
+$tag_width: $project_width / 4;
+$tag_font_size: 0.6em;
+
+.projectDisplay {
+    width: 100%;
+    //height: 100%;
+    display: inline-flex;
+    padding-left: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.project {
+  flex-shrink: 2;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: $project_width;
+  height: $project_height;
+  background-color: $project-container-color;
+  color: $project-text-color;
+  //padding: 10px;
+  margin-right: 30px;
+  #section1, #section2 {
+      border-bottom: $project_section_divider;
+  }
+  #section1, #section2, #section3 {
+      height: $project_section_height;
+      width: $project_width;
+      margin: 0 auto;
+  }
+  #section1 {
+      justify-content: center;
+      #title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      #time {
+        text-decoration: italic;
+        font-size: 0.8em;
+        opacity: 0.8;
+        margin: 0;
+        float: right;
+        width: 200px;
+        text-align: center;
+      }
+      .p_link {
+          color: $link_color;
+          /*margin-right: auto;
+          margin-left: 0;*/
+          margin-left: 10px;
+          float: left;
+          position: relative;
+          top: 0;
+      }
+
+      .p_link:visited {
+          color: $link_visited_color;
+      }
+  }
+  #section2 {
+
+  }
+  #section3 {
+      #tags {
+        margin-left: 10px;
+        display: inline-flex;
+        align-items: center;
+        width: $project_width;
+      }
+
+      .tag {
+        color: $tag_text_color;
+        background-color: $tag_bg_color;
+        font-size: $tag_font_size;
+        font-family: Helvetica;
+        margin-right: 5px;
+        border: 1px solid black;
+        width: $tag_width;
+        text-align: center;
+        border-radius: 20px;
+      }
+  }
+}

@@ -1,0 +1,24 @@
+$menu-bg-color: #111911;
+$border-color: #ffffff;
+
+.App-header {
+    min-width: 100vw;
+    flex-direction: unset;
+    margin-bottom: 10em;
+    .menu {
+      //overflow-x: scroll;
+      display: flex;
+      width: 100vw;
+      justify-content: space-evenly; //center;
+      position: absolute;
+      top: 0;
+      border-bottom: 1px solid $border-color;
+      background-color: $menu-bg-color;
+      margin-bottom: 10em;
+      div {
+          //margin: 10vw;
+          margin-bottom: 0;
+          margin-top: 0;
+      }
+    }
+}
