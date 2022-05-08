@@ -1,7 +1,8 @@
 //import logo from './logo.svg';
-import './Css/App.css';
+//import './Css/App.css';
 import './Sass/Project.scss';
 import './Sass/menu.scss';
+import './Sass/common.scss';
 import Projects from './projects.json';
 
 const Project = props => {

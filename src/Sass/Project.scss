@@ -9,15 +9,15 @@ $project_width: 22em;
 $project_section_height: $project_height / 3;
 $project_section_divider: 1px solid #ffffff;
 $tag_width: $project_width / 4;
-$tag_font_size: 0.6em;
+$tag_font_size: 0.8em;
 
 .projectDisplay {
-    width: 100%;
-    //height: 100%;
+    width: 100vw;
     display: inline-flex;
     padding-left: 20px;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 3em;
 
 }
 
@@ -26,10 +26,10 @@ $tag_font_size: 0.6em;
   border: 1px solid black;
   border-radius: 25px;
   width: $project_width;
-  height: $project_height;
+  min-height: $project_height;
   background-color: $project-container-color;
   color: $project-text-color;
-  //padding: 10px;
+  padding: 0.25em;
   margin-right: 30px;
   #section1, #section2 {
       border-bottom: $project_section_divider;
@@ -70,14 +70,18 @@ $tag_font_size: 0.6em;
       }
   }
   #section2 {
-
+    overflow-wrap: break-word;
   }
   #section3 {
+      max-width: $project_width;
+      overflow-wrap: break-word;
       #tags {
-        margin-left: 10px;
+        margin-right: 0.25em;
         display: inline-flex;
         align-items: center;
         width: $project_width;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
 
       .tag {
@@ -86,10 +90,15 @@ $tag_font_size: 0.6em;
         font-size: $tag_font_size;
         font-family: Helvetica;
         margin-right: 5px;
+        margin-bottom: 0;
+        margin-top: 0.25em;
         border: 1px solid black;
         width: $tag_width;
         text-align: center;
-        border-radius: 20px;
+        border-radius: 1.5em;
+        max-width: $tag_width * 0.9;
+        overflow-wrap: break-word;
+        padding: 0.5em;
       }
   }
 }

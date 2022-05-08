@@ -32,7 +32,9 @@
                 "Node",
                 "Sass",
                 "Redis",
-                "Express"
+                "Express",
+                "Typescript",
+                "Webpack"
             ]
         }
     ]
